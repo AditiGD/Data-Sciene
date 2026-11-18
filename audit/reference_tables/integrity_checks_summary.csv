@@ -1,0 +1,18 @@
+check,description,n_offending,status
+C01_ballot_multiset,"each (year,round,vote_type,voter) ballot awards exactly {12,10,8..1}",0,PASS
+C02_no_self_votes,voter != receiver,0,PASS
+C03_jury_plus_public_eq_total,"jury+public == total per voter->receiver (and public==total where no jury exists, e.g. WLD)",0,PASS
+C03b_total_only_rows_are_tele_semis,rows with only 'total' (no split) occur only in 2023-2025 semis,0,PASS
+C04_votes_sum_eq_points_field,sum of votes dict == Score.points for every performance and score name,0,PASS
+C05a_perf_total_eq_jury_plus_public,performance points_total == points_jury + points_public,0,PASS
+C05b_places_consistent,places are 1..n and monotone in points_total (ties reported as INFO),0,PASS
+C05c_running_order_permutation,running order is a permutation of 1..n,1,PASS_WITH_KNOWN_EXCEPTION
+C06_no_duplicate_keys,"unique (year,round,vote_type,voter,receiver)",0,PASS
+C06b_no_duplicate_performances,"unique (year,round,contestant_id) and (year,round,country)",0,PASS
+C07_codes_in_countries_json,every voter/receiver code exists in countries.json,9,PASS_WITH_KNOWN_EXCEPTION
+C08_dense_grid,every voter listed (possibly with 0) for every non-self receiver,0,PASS
+C09_points_domain,"jury/public in {0..8,10,12}; total in pairwise sums",0,PASS
+C10_voter_assignment,each country votes in exactly one semi; jury/public voter sets equal (bar WLD),0,PASS
+C11_qualification_consistent,no non-qualifier in final; every top-10 semi entry is in the final,1,PASS_WITH_KNOWN_EXCEPTION
+C12_final_voters_eq_participants,final voters == participating countries (DQ'd entries documented),0,PASS
+C13_contestant_join,every performance contestantId resolves to a contestant country,0,PASS

@@ -1,0 +1,21 @@
+# Placeholder: complete title, version, date and licence before the final submission.
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Eurovision Song Contest voting favouritism, 2016-2025"
+type: software
+authors:
+  - given-names: Tannu
+    family-names: Malik
+  - given-names: Aditi
+    family-names: Deshpande
+version: 0.1.0
+# date-released: YYYY-MM-DD
+# license: TODO (see README)
+# repository-code: TODO
+references:
+  - type: dataset
+    title: "Eurovision dataset (Graph Drawing Contest 2026 fork)"
+    url: "https://github.com/Graph-Drawing-Contest/eurovision-dataset"
+    commit: "1f39f6b238b94f2806694a08607998258ed8a41e"
+    authors:
+      - name: "EurovisionAPI contributors"

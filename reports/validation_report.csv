@@ -1,0 +1,13 @@
+check,severity,passed,year,round,vote_type,voter,receiver,detail
+schema,error,True,,,,,,
+unique_keys,error,True,,,,,,
+no_self_votes,error,True,,,,,,
+ballot_points_set,error,True,,,,,,
+complete_ballots,error,True,,,,,,
+jury_plus_televote_equals_combined,error,True,,,,,,
+identical_jury_televote_ballot,warning,True,,,,,,
+round_coverage,warning,False,2020,final,,,,round cancelled
+round_coverage,warning,False,2020,semifinal1,,,,round cancelled
+round_coverage,warning,False,2020,semifinal2,,,,round cancelled
+receiver_totals_match_raw,error,True,,,,,,
+known_codes,error,True,,,,,,

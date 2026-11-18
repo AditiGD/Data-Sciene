@@ -1,0 +1,28 @@
+year,round,n_performers,score_names,n_voters_total,n_voters_jury,n_voters_public,WLD,voters_not_performing,null_place,null_running
+2016,semifinal1,18,"jury,public,total",21,21,21,False,ES FR SE,0,0
+2016,semifinal2,18,"jury,public,total",21,21,21,False,DE GB IT,0,0
+2016,final,26,"jury,public,total",42,42,42,False,AL BA BY CH DK EE FI GR IE IS MD ME MK NO SI SM,0,0
+2017,semifinal1,18,"jury,public,total",21,21,21,False,ES GB IT,0,0
+2017,semifinal2,18,"jury,public,total",21,21,21,False,DE FR UA,0,0
+2017,final,26,"jury,public,total",42,42,42,False,AL CH CZ EE FI GE IE IS LT LV ME MK MT RS SI SM,0,0
+2018,semifinal1,19,"jury,public,total",22,22,22,False,ES GB PT,0,0
+2018,semifinal2,18,"jury,public,total",21,21,21,False,DE FR IT,0,0
+2018,final,26,"jury,public,total",43,43,43,False,AM AZ BE BY CH GE GR HR IS LV ME MK MT PL RO RU SM,0,0
+2019,semifinal1,17,"jury,public,total",20,20,20,False,ES FR IL,0,0
+2019,semifinal2,18,"jury,public,total",21,21,21,False,DE GB IT,0,0
+2019,final,26,"jury,public,total",41,41,41,False,AM AT BE FI GE HR HU IE LT LV MD ME PL PT RO,0,0
+2021,semifinal1,16,"jury,public,total",19,19,19,False,DE IT NL,0,0
+2021,semifinal2,17,"jury,public,total",20,20,20,False,ES FR GB,0,0
+2021,final,26,"jury,public,total",39,39,39,False,AT AU CZ DK EE GE HR IE LV MK PL RO SI,0,0
+2022,semifinal1,17,"jury,public,total",19,19,19,False,FR IT,0,0
+2022,semifinal2,18,"jury,public,total",21,21,21,False,DE ES GB,0,0
+2022,final,25,"jury,public,total",40,40,40,False,AL AT BG CY DK GE HR IE IL LV ME MK MT SI SM,0,0
+2023,semifinal1,15,total,19,0,0,True,DE FR IT,0,0
+2023,semifinal2,16,total,20,0,0,True,ES GB UA,0,0
+2023,final,26,"jury,public,total",38,37,38,True,AZ DK GE GR IE IS LV MT NL RO SM,0,0
+2024,semifinal1,15,total,19,0,0,True,DE GB SE,0,0
+2024,semifinal2,16,total,20,0,0,True,ES FR IT,0,0
+2024,final,25,"jury,public,total",38,37,38,True,AL AU AZ BE CZ DK IS MD MT NL PL SM,0,0
+2025,semifinal1,15,total,19,0,0,True,CH ES IT,0,0
+2025,semifinal2,16,total,20,0,0,True,DE FR GB,0,0
+2025,final,26,"jury,public,total",38,37,38,True,AU AZ BE CY CZ GE HR IE ME RS SI,0,0

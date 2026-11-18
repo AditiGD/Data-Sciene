@@ -1,0 +1,94 @@
+a,b,contig_type,source,note
+AL,GR,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AL,ME,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AL,MK,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AL,RS,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),"DISPUTED: border exists only via Kosovo (XK); GeoNames counts it, sovereignty-neutral coding should set land_border=False or flag"
+AM,AZ,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AM,GE,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AT,CH,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AT,CZ,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AT,DE,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AT,HU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AT,IT,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AT,SI,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AZ,GE,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+AZ,RU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),Dagestan border
+BA,HR,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BA,ME,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BA,RS,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BE,DE,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BE,FR,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BE,LU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BE,NL,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BG,GR,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BG,MK,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BG,RO,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BG,RS,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BY,LT,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BY,LV,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BY,PL,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BY,RU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+BY,UA,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+CH,DE,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+CH,FR,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+CH,IT,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+CZ,DE,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+CZ,PL,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+DE,DK,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+DE,FR,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+DE,LU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+DE,NL,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+DE,PL,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+EE,LV,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+EE,RU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+ES,FR,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+ES,PT,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+FI,NO,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+FI,RU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+FI,SE,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+FR,IT,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+FR,LU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+GB,IE,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),Northern Ireland land border
+GE,RU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+GR,MK,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+HR,HU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+HR,ME,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+HR,RS,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+HR,SI,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+HU,RO,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+HU,RS,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+HU,SI,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+HU,UA,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+IT,SI,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+IT,SM,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),enclave
+LT,LV,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+LT,PL,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+LT,RU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),via Kaliningrad exclave
+LV,RU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+MD,RO,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+MD,UA,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+ME,RS,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+MK,RS,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+NO,RU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),short Arctic border
+NO,SE,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+PL,RU,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),via Kaliningrad exclave
+PL,UA,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+RO,RS,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+RO,UA,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+RU,UA,land,GeoNames countryInfo 'neighbours' via geonamescache 3.0.2 (CC BY 4.0),
+DK,SE,sea_le12mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Oresund strait ~4 km; fixed link (Oresund Bridge)
+AL,IT,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Strait of Otranto ~72 km
+BE,GB,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),North Sea ~110-120 km (Dover-Ostend)
+DE,SE,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Baltic; Rugen-Skane ~90-100 km
+DK,NO,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Skagerrak ~130-140 km
+DK,PL,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Bornholm-Polish coast ~90-100 km
+EE,FI,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Gulf of Finland ~60-80 km (Tallinn-Helsinki)
+EE,SE,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Baltic; Gotland/Faro-Saaremaa ~150 km
+GB,NL,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),North Sea ~180 km (Harwich-Hook of Holland)
+GR,IT,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Ionian Sea; Othonoi-Salento ~75 km
+HR,IT,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Adriatic; Palagruza-Gargano ~50-60 km
+IT,ME,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Adriatic ~190 km (Bari-Bar)
+IT,MT,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Malta channel ~93 km (Sicily-Malta)
+LV,SE,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Baltic; Gotland-Courland ~150 km
+PL,SE,sea_le150mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Baltic ~165 km (Ystad-Swinoujscie)
+FR,GB,sea_le24mi,Curated; class per COW Direct Contiguity v3.2 thresholds (verify against contdir v3.2),Strait of Dover ~33 km; Channel Tunnel

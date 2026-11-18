@@ -1,0 +1,44 @@
+# Single source of truth for pipeline settings.
+# Relative paths are resolved against the repository root (the parent of config/).
+# Environment overrides: ESC_DATA_ROOT replaces data.raw_root.
+
+data:
+  # Root of a clone of the official course dataset (Graph Drawing Contest 2026 fork
+  # of EurovisionAPI/dataset): the folder that contains data/countries.json and
+  # data/senior/. See data/raw/README.md for how to fetch and pin it.
+  raw_root: data/raw/eurovision-dataset
+  contest: senior
+  # Commit the analysis was audited against. A different commit only warns,
+  # but the commit actually used is always written to the output metadata.
+  expected_commit: 1f39f6b238b94f2806694a08607998258ed8a41e   # 2025-12-23, ends at 2025
+  source_url: https://github.com/Graph-Drawing-Contest/eurovision-dataset
+  # Origin of the fork. Only needed for the optional 2026 hold-out (the fork ends at 2025).
+  upstream_url: https://github.com/EurovisionAPI/dataset
+
+scope:
+  years: [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]  # 2020 cancelled; kept so it is reported
+  # Optional out-of-sample check (plan review m5). Not built by default, and 2026 only
+  # exists upstream (EurovisionAPI/dataset), not in the course fork.
+  holdout_years: [2026]
+  rounds: [final, semifinal1, semifinal2]
+  vote_types: [jury, televote, combined]
+
+rules:
+  # From this year on, a semi-final that only reports `total` is televote-only.
+  televote_only_semis_from: 2023
+  # Voters that are not countries (allowed as televote / combined voters only).
+  non_country_voters: [WLD]
+  ballot_points: [12, 10, 8, 7, 6, 5, 4, 3, 2, 1]
+  # Jury rankings: average rank 2016-17, exponential weighting from 2018 (data audit #5).
+  jury_exponential_from: 2018
+
+seeds:
+  global: 20251117
+  n_permutations: 10000
+
+paths:
+  interim: data/interim
+  processed: data/processed
+  reports: reports
+  figures: reports/figures
+  anomaly_register: config/anomaly_register.csv

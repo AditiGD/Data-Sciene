@@ -1,0 +1,5 @@
+scope,vote_kind,n_rows,n_pairs,n_obs_min,n_obs_median,n_obs_max,pairs_ge3,pairs_ge5,pairs_ge7,pairs_eq9
+A_finals_2016_2025,jury,8999,1853,1,5.0,9,1466,980,475,186
+A_finals_2016_2025,televote,8999,1853,1,5.0,9,1466,980,475,186
+B_finals_plus_semis_2016_2025,jury,13158,1924,1,7.0,13,1754,1499,1112,368
+B_finals_plus_semis_2016_2025,televote,14787,1930,1,8.0,16,1800,1544,1253,344

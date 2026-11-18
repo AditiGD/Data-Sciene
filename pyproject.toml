@@ -1,0 +1,87 @@
+[project]
+name = "esc-bias"
+version = "0.1.0"
+description = "Eurovision Song Contest voting favouritism, 2016-2025: jury vs televote dyadic bias"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Tannu Malik" }, { name = "Aditi Deshpande" }]
+# License: TODO, chosen by the team (see README "License").
+dependencies = [
+    "pandas>=3.0", # pandas 3: native string dtype, copy-on-write
+    "numpy>=1.26",
+    "pyarrow>=16",
+    "pandera>=0.20",
+    "networkx>=3.2",
+    "scipy>=1.12",
+    "statsmodels>=0.14",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "pyyaml>=6.0", # needed to read config/config.yaml
+]
+
+[project.scripts]
+esc-bias = "esc_bias.cli:main"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=5",
+    "ruff>=0.6",
+    "mypy>=1.10",
+    "pre-commit>=3.7",
+    "nbstripout>=0.7",
+    "jupytext>=1.16",
+    "types-PyYAML",
+    "pandas-stubs",
+]
+
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/esc_bias"]
+
+# ---------------------------------------------------------------- tools
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
+markers = [
+    "rawdata: integration test that needs the real dataset (set ESC_DATA_ROOT); skipped otherwise",
+]
+
+[tool.coverage.run]
+source = ["esc_bias"]
+branch = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-include = ["*.ipynb"]
+# research scripts kept as-run (audit, meta-analysis, pilot) are not reformatted
+extend-exclude = ["audit", "meta_analysis", "pilot"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "NPY", "PD", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+# notebooks: imports after markdown cells and bare expressions (cell output) are normal
+"notebooks/*" = ["E402", "B018"]
+
+[tool.mypy]
+python_version = "3.11"
+files = ["src"]
+strict = false
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+no_implicit_optional = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = ["networkx.*", "scipy.*", "statsmodels.*", "seaborn.*", "pyarrow.*"]
+ignore_missing_imports = true
+
+[tool.jupytext]
+formats = "ipynb,py:percent"

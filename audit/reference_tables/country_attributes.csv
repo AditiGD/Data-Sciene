@@ -1,0 +1,46 @@
+code,iso3,name,un_m49_subregion,continent,eu27_current,geonames_languages,primary_language,capital,capital_lat,capital_lon,population_geonames,land_neighbours_all,land_neighbours_esc,ex_ussr,ex_yugoslavia,nordic,baltic,ex_warsaw_pact_non_ussr,big5
+AL,ALB,Albania,Southern Europe,Europe,False,"sq,el",sq,Tirana,41.32744,19.81866,2866376,"MK,GR,ME,RS,XK","GR,ME,MK,RS",False,False,False,False,True,False
+AM,ARM,Armenia,Western Asia,Asia,False,hy,hy,Yerevan,40.17765,44.5126,3090500,"GE,IR,AZ,TR","AZ,GE",True,False,False,False,False,False
+AT,AUT,Austria,Western Europe,Europe,True,"de-AT,hr,hu,sl",de,Vienna,48.20849,16.37208,8847037,"CH,DE,HU,SK,CZ,IT,SI,LI","CH,CZ,DE,HU,IT,SI",False,False,False,False,False,False
+AU,AUS,Australia,Australia and New Zealand,Oceania,False,en-AU,en,Canberra,-35.28346,149.12807,24992369,,,False,False,False,False,False,False
+AZ,AZE,Azerbaijan,Western Asia,Asia,False,"az,ru,hy",az,Baku,40.37767,49.89201,10224900,"GE,IR,AM,TR,RU","AM,GE,RU",True,False,False,False,False,False
+BA,BIH,Bosnia and Herzegovina,Southern Europe,Europe,False,"bs,hr-BA,sr-BA",sh,Sarajevo,43.84864,18.35644,3323929,"HR,ME,RS","HR,ME,RS",False,True,False,False,False,False
+BE,BEL,Belgium,Western Europe,Europe,True,"nl-BE,fr-BE,de-BE",nl,Brussels,50.85045,4.34878,11422068,"DE,NL,LU,FR","DE,FR,LU,NL",False,False,False,False,False,False
+BG,BGR,Bulgaria,Eastern Europe,Europe,True,"bg,tr-BG,rom",bg,Sofia,42.69751,23.32415,7000039,"MK,GR,RO,TR,RS","GR,MK,RO,RS",False,False,False,False,True,False
+BY,BLR,Belarus,Eastern Europe,Europe,False,"be,ru",be,Minsk,53.90019,27.56653,9485386,"PL,LT,UA,RU,LV","LT,LV,PL,RU,UA",True,False,False,False,False,False
+CH,CHE,Switzerland,Western Europe,Europe,False,"de-CH,fr-CH,it-CH,rm",de,Bern,46.94809,7.44744,8516543,"DE,IT,LI,FR,AT","AT,DE,FR,IT",False,False,False,False,False,False
+CY,CYP,Cyprus,Western Asia,Asia,True,"el-CY,tr-CY,en",el,Nicosia,35.17284,33.35397,1189265,,,False,False,False,False,False,False
+CZ,CZE,Czechia,Eastern Europe,Europe,True,"cs,sk",cs,Prague,50.08804,14.42076,10625695,"PL,DE,SK,AT","AT,DE,PL",False,False,False,False,True,False
+DE,DEU,Germany,Western Europe,Europe,True,de,de,Berlin,52.52437,13.41053,82927922,"CH,PL,NL,DK,BE,CZ,LU,FR,AT","AT,BE,CH,CZ,DK,FR,LU,NL,PL",False,False,False,False,False,True
+DK,DNK,Denmark,Northern Europe,Europe,True,"da-DK,en,fo,de-DK",da,Copenhagen,55.67594,12.56553,5797446,DE,DE,False,False,True,False,False,False
+EE,EST,Estonia,Northern Europe,Europe,True,"et,ru",et,Tallinn,59.43696,24.75353,1320884,"RU,LV","LV,RU",True,False,False,True,False,False
+ES,ESP,Spain,Southern Europe,Europe,True,"es-ES,ca,gl,eu,oc",es,Madrid,40.4165,-3.70256,46723749,"AD,PT,GI,FR,MA","FR,PT",False,False,False,False,False,True
+FI,FIN,Finland,Northern Europe,Europe,True,"fi-FI,sv-FI,smn",fi,Helsinki,60.16952,24.93545,5518050,"NO,RU,SE","NO,RU,SE",False,False,True,False,False,False
+FR,FRA,France,Western Europe,Europe,True,"fr-FR,frp,br,co,ca,eu,oc",fr,Paris,48.85341,2.3488,66987244,"CH,DE,BE,LU,IT,AD,MC,ES","BE,CH,DE,ES,IT,LU",False,False,False,False,False,True
+GB,GBR,United Kingdom,Northern Europe,Europe,False,"en-GB,cy-GB,gd",en,London,51.50853,-0.12574,66488991,IE,IE,False,False,False,False,False,True
+GE,GEO,Georgia,Western Asia,Asia,False,"ka,ru,hy,az",ka,Tbilisi,41.69143,44.83412,3704500,"AM,AZ,TR,RU","AM,AZ,RU",True,False,False,False,False,False
+GR,GRC,Greece,Southern Europe,Europe,True,"el-GR,en,fr",el,Athens,37.98376,23.72784,10727668,"AL,MK,TR,BG","AL,BG,MK",False,False,False,False,False,False
+HR,HRV,Croatia,Southern Europe,Europe,True,"hr-HR,sr",sh,Zagreb,45.81444,15.97798,3871833,"HU,SI,BA,ME,RS","BA,HU,ME,RS,SI",False,True,False,False,False,False
+HU,HUN,Hungary,Eastern Europe,Europe,True,hu-HU,hu,Budapest,47.49835,19.04045,9768785,"SK,SI,RO,UA,HR,AT,RS","AT,HR,RO,RS,SI,UA",False,False,False,False,True,False
+IE,IRL,Ireland,Northern Europe,Europe,True,"en-IE,ga-IE",en,Dublin,53.33306,-6.24889,4853506,GB,GB,False,False,False,False,False,False
+IL,ISR,Israel,Western Asia,Asia,False,"he,ar-IL,en-IL,",he,Jerusalem,31.76904,35.21633,8883800,"SY,JO,LB,EG,PS",,False,False,False,False,False,False
+IS,ISL,Iceland,Northern Europe,Europe,False,"is,en,de,da,sv,no",is,Reykjavik,,,353574,,,False,False,True,False,False,False
+IT,ITA,Italy,Southern Europe,Europe,True,"it-IT,de-IT,fr-IT,sc,ca,co,sl",it,Rome,41.89193,12.51133,60431283,"CH,VA,SI,SM,FR,AT","AT,CH,FR,SI,SM",False,False,False,False,False,True
+LT,LTU,Lithuania,Northern Europe,Europe,True,"lt,ru,pl",lt,Vilnius,54.68916,25.2798,2789533,"PL,BY,RU,LV","BY,LV,PL,RU",True,False,False,True,False,False
+LU,LUX,Luxembourg,Western Europe,Europe,True,"lb,de-LU,fr-LU",lb,Luxembourg,49.60982,6.13268,607728,"DE,BE,FR","BE,DE,FR",False,False,False,False,False,False
+LV,LVA,Latvia,Northern Europe,Europe,True,"lv,ru,lt",lv,Riga,56.946,24.10589,1926542,"LT,EE,BY,RU","BY,EE,LT,RU",True,False,False,True,False,False
+MD,MDA,Moldova,Eastern Europe,Europe,False,"ro,ru,gag,tr",ro,Chisinau,47.00902,28.85938,3545883,"RO,UA","RO,UA",True,False,False,False,False,False
+ME,MNE,Montenegro,Southern Europe,Europe,False,"sr,hu,bs,sq,hr,rom",sh,Podgorica,42.44124,19.26309,622345,"AL,HR,BA,RS,XK","AL,BA,HR,RS",False,True,False,False,False,False
+MK,MKD,North Macedonia,Southern Europe,Europe,False,"mk,sq,tr,rmm,sr",mk,Skopje,41.99646,21.43141,2082958,"AL,GR,BG,RS,XK","AL,BG,GR,RS",False,True,False,False,False,False
+MT,MLT,Malta,Southern Europe,Europe,True,"mt,en-MT",mt,Valletta,35.89968,14.5148,483530,,,False,False,False,False,False,False
+NL,NLD,Netherlands,Western Europe,Europe,True,"nl-NL,fy-NL",nl,Amsterdam,52.37403,4.88969,17231017,"DE,BE","BE,DE",False,False,False,False,False,False
+NO,NOR,Norway,Northern Europe,Europe,False,"no,nb,nn,se,fi",no,Oslo,59.91273,10.74609,5314336,"FI,RU,SE","FI,RU,SE",False,False,True,False,False,False
+PL,POL,Poland,Eastern Europe,Europe,True,pl,pl,Warsaw,52.22977,21.01178,37978548,"DE,LT,SK,CZ,BY,UA,RU","BY,CZ,DE,LT,RU,UA",False,False,False,False,True,False
+PT,PRT,Portugal,Southern Europe,Europe,True,"pt-PT,mwl",pt,Lisbon,38.72509,-9.1498,10281762,ES,ES,False,False,False,False,False,False
+RO,ROU,Romania,Eastern Europe,Europe,True,"ro,hu,rom",ro,Bucharest,44.43225,26.10626,19473936,"MD,HU,UA,BG,RS","BG,HU,MD,RS,UA",False,False,False,False,True,False
+RS,SRB,Serbia,Southern Europe,Europe,False,"sr,hu,bs,rom",sh,Belgrade,44.80401,20.46513,6982084,"AL,HU,MK,RO,HR,BA,BG,ME,XK","AL,BA,BG,HR,HU,ME,MK,RO",False,True,False,False,False,False
+RU,RUS,Russia,Eastern Europe,Europe,False,"ru,tt,xal,cau,ady,kv,ce,tyv,cv,udm,tut,mns,bua,myv,mdf,chm,ba,inh,kbd,krc,av,sah,nog",ru,Moscow,55.75204,37.61781,144478050,"GE,CN,BY,UA,KZ,LV,PL,EE,LT,FI,MN,NO,AZ,KP","AZ,BY,EE,FI,GE,LT,LV,NO,PL,UA",True,False,False,False,False,False
+SE,SWE,Sweden,Northern Europe,Europe,True,"sv-SE,se,sma,fi-SE",sv,Stockholm,59.32938,18.06871,10183175,"NO,FI","FI,NO",False,False,True,False,False,False
+SI,SVN,Slovenia,Southern Europe,Europe,True,"sl,sh",sl,Ljubljana,46.05108,14.50513,2067372,"HU,IT,HR,AT","AT,HR,HU,IT",False,True,False,False,False,False
+SM,SMR,San Marino,Southern Europe,Europe,False,it-SM,it,San Marino,43.93667,12.44639,33785,IT,IT,False,False,False,False,False,False
+UA,UKR,Ukraine,Eastern Europe,Europe,False,"uk,ru-UA,rom,pl,hu",uk,Kyiv,50.45466,30.5238,40000000,"PL,MD,HU,SK,BY,RO,RU","BY,HU,MD,PL,RO,RU",True,False,False,False,False,False

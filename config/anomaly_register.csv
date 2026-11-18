@@ -1,0 +1,56 @@
+# Anomaly register (versioned; change it only via a reviewed pull request).
+#
+# Source: docs/03_data_audit.md section 3 (rows #2-#27; anomaly_id A<nn> = audit row #nn,
+# a/b suffix where one event needs different handling per vote type). Audited against the
+# course dataset Graph-Drawing-Contest/eurovision-dataset @ 1f39f6b238b94f2806694a08607998258ed8a41e.
+# Ballot-integrity checks on that commit found no failing ballot; `esc-bias validate`
+# writes any future failures to reports/anomaly_candidates.csv for review.
+#
+# Columns
+#   anomaly_id  stable id, never reused
+#   year, round, vote_type, voter, receiver
+#               match keys, all must match. `*` = any value; `a;b;c` = any listed value.
+#               vote_type uses analysis names (jury, televote, combined).
+#   issue       flag code (as in the data audit)
+#   handling    keep        = documented only; no column changes, not listed in anomaly_ids
+#               flag        = kept in all analyses, is_flagged=True (inspect / annotate)
+#               sensitivity = kept in the primary analysis, dropped in the pre-specified
+#                             sensitivity run (sensitivity=True)
+#               exclude     = dropped from pair-level analyses (exclude=True); raw rows stay
+#                             in the table, so receiver totals are unaffected
+#   source_url  evidence (official/press page, or dataset file for data-derived entries)
+#   notes       free text
+#
+# Absent countries (withdrawn, expelled, disqualified entries) have NO rows in the tidy
+# table: missing is not 0. Their "keep" entries are documentation only.
+anomaly_id,year,round,vote_type,voter,receiver,issue,handling,source_url,notes
+A02,2016,final,jury;combined,DK,*,JUROR_ERROR_2016_DK,exclude,https://tvtonight.com.au/2016/05/oops-danish-eurovision-juror-admits-voting-error-for-ukraine.html,"Danish juror ranked in reverse; official result stood (DK jury UA 12, AU 10, GE 0). Also https://eurovisionary.com/danish-jury-votes-published. Excluded from pair analysis (design v2.1, red-team #12): the reversed juror distorts the whole DK jury ballot under 2016 average-rank aggregation; S3a re-includes it."
+A03,2016,*,*,RO,*,ABSENT_2016_RO,keep,https://eurovision.tv/story/tvr-romania-no-longer-entitled-to-take-part-in-eurovision-2016,"Romania expelled (TVR debts). Structural missing, not 0."
+A04,2017,*,*,RU,*,ABSENT_2017_RU,keep,https://eurovisionworld.com/esc/russia-withdraws-from-eurovision-2017,"Russia withdrew. Absent as voter and receiver: missing, not 0."
+A05,2016;2017,*,jury,*,*,JURY_METHOD_AVERAGE_RANK,sensitivity,https://eurovisionworld.com/esc/eurovision-2018-ebu-changes-the-calculation-of-jury-voting,"Jury aggregation was the plain average rank in 2016-17 and exponential weighting from 2018 (see jury_method column). Sensitivity: jury analyses without 2016-17, or a year fixed effect. Also https://escxtra.com/2018/04/28/the-jury-voting-change-explained/"
+A06,2019,final,jury;combined,BY,*,SUBST_JURY_2019_BY,exclude,https://ebu.ch/news/2019/05/ebu-issues-statement-on-eurovision-song-contest-grand-final-jury-result,Belarus jury dismissed; EBU substitute aggregate (data holds the corrected values). Not a Belarusian jury: excluded from pair analyses; still counts in receiver totals. combined row excluded because it contains the substitute jury ballot.
+A07,2019,*,*,UA,*,ABSENT_2019_UA,keep,https://eurovisionworld.com/esc/ukraine-withdraws-from-eurovision-2019,"Ukraine withdrew. Missing, not 0."
+A08,*,*,*,MK,*,NAME_CHANGE_MK,keep,https://eurovisionary.com/by-country/fyr-macedonia,"FYR Macedonia -> North Macedonia (2019). Code MK unchanged; join on code, never on name."
+A09,2020,*,*,*,*,CONTEST_CANCELLED,exclude,https://github.com/Graph-Drawing-Contest/eurovision-dataset/tree/1f39f6b238b94f2806694a08607998258ed8a41e/data/senior/2020/rounds,"Contest cancelled (COVID-19). All three rounds have performances: null, so there are no rows; listed so the gap is explicit. https://www.rollingstone.com/music/music-news/eurovision-2020-coronavirus-cancellation-969046/"
+A10,2021;2022;2023;2024;2025;2026,*,*,BY,*,ABSENT_BY_2021,keep,https://en.wikipedia.org/wiki/Belarus_in_the_Eurovision_Song_Contest_2021,"Belarus disqualified 2021, absent since. Missing, not 0."
+A11,2022;2023;2024;2025;2026,*,*,RU,*,EXCLUDED_RU_2022,keep,https://eurovisionworld.com/esc/ebu-kicks-russia-out-of-eurovision-2022,"Russia excluded from 2022. Missing, not 0."
+A12a,2022,semifinal2;final,jury,AZ;GE;ME;PL;RO;SM,*,SUBST_JURY_2022_SIX,exclude,https://eurovisionworld.com/esc/eurovision-2022-votes-from-six-national-juries-removed,Six juries removed for irregular SF2 voting patterns; replaced by substitute aggregates in SF2 and final (identical-ballot signature confirmed by the data audit). Also https://escxtra.com/2022/05/19/ebu-reveals-eurovision-2022-irregular-voting-patterns/
+A12b,2022,semifinal2;final,televote;combined,AZ;GE;ME;PL;RO;SM,*,SUBST_JURY_2022_SIX,sensitivity,https://eurovisionworld.com/esc/eurovision-2022-votes-from-six-national-juries-removed,Same event as A12a: televote and combined rows of these voters are dropped in the sensitivity run (data audit #12). SM televote is excluded anyway (A13a).
+A13a,*,*,televote,SM,*,SYNTH_TELEVOTE_SM,exclude,https://en.wikipedia.org/wiki/San_Marino_in_the_Eurovision_Song_Contest,"San Marino has no real televote (shares Italy's phone network, below threshold): the EBU substitutes a composite. SM as a televote voter is excluded from pair analyses; SM as receiver is fine. Also https://escinsight.com/2016/12/05/san-marino-televote-eurovision-2016/ (2023+ method not confirmed)."
+A13b,*,*,combined,SM,*,SYNTH_TELEVOTE_SM,exclude,https://en.wikipedia.org/wiki/San_Marino_in_the_Eurovision_Song_Contest,"Derived from A13a: SM's combined ballot contains the synthetic televote. (The audit lists the event as public (+total); handling for total not stated separately, so the stricter one is applied.)"
+A14,*,*,*,WLD,*,REST_OF_WORLD,exclude,https://github.com/Graph-Drawing-Contest/eurovision-dataset/blob/1f39f6b238b94f2806694a08607998258ed8a41e/data/countries.json,"WLD = Rest of the World online televote (from 2023): not a country, absent from countries.json, voter_is_country=False. Excluded from pair analyses; still counts in receiver totals. https://www.ebu.ch/news/2022/11/voting-changes-announced-for-eurovision-song-contest-2023"
+A15,2023;2024;2025,semifinal1;semifinal2,televote,*,*,TELEVOTE_ONLY_SEMIS,flag,https://wiwibloggs.com/2022/11/22/eurovision-2023-voting-change-removes-juries-from-semi-finals/273929/,"Semi-finals 2023-25 report only `total`, which is the televote (+WLD). Mapped to vote_type=televote, vote_type_source=total. No jury counterpart: exclude these rounds from jury-vs-televote (RQ3) contrasts."
+A16,2023,*,*,*,*,HOST_ON_BEHALF_2023,keep,https://www.ebu.ch/news/2022/11/voting-changes-announced-for-eurovision-song-contest-2023,GB hosted on behalf of UA (contest.json intendedCountry=UA). No vote anomaly; 'host' differs from venue in 2023.
+A17,*,*,*,CZ,*,NAME_CHANGE_CZ,keep,https://escxtra.com/2023/02/11/ebu-confirms-czechia-name-change-for-eurovision/,Czech Republic -> Czechia branding (2023). Code CZ unchanged.
+A18,2023;2024,*,*,BG;ME;MK,*,WITHDRAWALS_2023,keep,https://github.com/Graph-Drawing-Contest/eurovision-dataset/blob/1f39f6b238b94f2806694a08607998258ed8a41e/data/senior/2023,"BG, ME, MK withdrew in 2023 (data-verified; reasons not web-verified). ME returned 2025; BG and MK also absent in 2025. Missing, not 0."
+A19a,2024,final,*,NL,*,VOTER_DQ_ENTRY_2024_NL,sensitivity,https://eurovisionworld.com/esc/joost-klein-from-the-netherlands-disqualified-from-eurovision-2024,"NL entry disqualified after SF2 but NL retained its vote (NL jury gave CH 12). NL as voter kept; dropped in sensitivity run. NL has no receiver rows in the 2024 final: missing, not 0."
+A19b,2024,semifinal2,*,*,NL,VOTER_DQ_ENTRY_2024_NL,flag,https://github.com/Graph-Drawing-Contest/eurovision-dataset/blob/1f39f6b238b94f2806694a08607998258ed8a41e/data/senior/2024/rounds/semifinal2.json,"semifinal2.json lists NL in `disqualifieds`: NL qualified (2nd, 182 points) but did not perform in the final. Its SF2 points are genuine; flag for selection-on-qualification analyses. https://www.dutchnews.nl/2024/05/disqualified-dutch-eurovision-entry-was-second-in-semi-final/"
+A20,2024,final,jury;combined,NO,*,JUROR_CONTROVERSY_2024_NO,flag,https://www.algemeiner.com/2024/05/13/eurovision-organizers-disappointed-jury-member-improperly-withheld-points-israel-due-gaza-war/,Norwegian juror said he withheld points from IL; the EBU accepted NRK's notarised result (NO jury gave IL 8).
+A21,2024;2025,*,televote,*,IL,ISRAEL_TELEVOTE_DISPUTES,keep,https://www.timesofisrael.com/eurovision-organizers-dismiss-claims-of-voter-fraud-after-israel-tops-televote/,"Broadcasters (ES, BE, FI, IS) asked for audits; the EBU found no irregularity and used no substitutes. Valid data; discuss in RQ3 interpretation (campaigns, diaspora)."
+A22a,2024;2025,*,*,RO,*,ABSENT_2024_25,keep,https://github.com/Graph-Drawing-Contest/eurovision-dataset/blob/1f39f6b238b94f2806694a08607998258ed8a41e/data/senior/2025,"RO absent 2024-25 (data). Missing, not 0."
+A22b,2025,*,*,MD,*,ABSENT_2024_25,keep,https://github.com/Graph-Drawing-Contest/eurovision-dataset/blob/1f39f6b238b94f2806694a08607998258ed8a41e/data/senior/2025,"MD absent 2025 (data). Missing, not 0."
+A23,2026,*,*,*,*,RULESET_2026,exclude,https://www.eurovision.com/newsroom/release/ebu-announces-changes-to-voting-rules-for-2026/,"New ruleset (juries back in semis, 7-member juries incl. 18-25-year-olds, televote cap 10). Outside the study window; the course fork ends at 2025. Only for an optional out-of-sample check (upstream EurovisionAPI/dataset)."
+A24,2026,*,*,ES;NL;IE;SI;IS,*,BOYCOTT_2026,exclude,https://www.npr.org/2025/12/05/nx-s1-5634466/eurovision-contest-israel,"Boycott by ES, NL, IE, SI, IS; BG, MD, RO returned; 35 countries; only 4 Big-Five auto-qualifiers. Handled as A23."
+A25,2026,*,jury;combined,CZ;CY;MT;LU,*,JURY_6_MEMBERS_2026,flag,https://eurovoix.com/2026/06/16/eurovision-2026-ebu-explains-six-member-juries-at-this-years-contest/,Four juries had 6 instead of 7 members; valid per the EBU.
+A26,*,*,*,AU,*,NON_EBU_AREA_AU,keep,https://en.wikipedia.org/wiki/Australia_in_the_Eurovision_Song_Contest,"Australia participates by invitation; must qualify since 2016 and votes only in its own semi + final. Region = Australia and New Zealand, no neighbours: exclude from border tests or code as its own region."
+A27,*,semifinal1;semifinal2,*,*,*,NON_PERFORMING_VOTERS,keep,https://github.com/Graph-Drawing-Contest/eurovision-dataset/blob/1f39f6b238b94f2806694a08607998258ed8a41e/data/senior,Big Five + host vote in one assigned semi without performing (see voter_performs_in_round). Semi observations exist only for receivers in the voter's semi.
