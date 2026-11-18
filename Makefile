@@ -5,7 +5,7 @@ UV      ?= uv
 RUN     := $(UV) run
 PY_SRC  := src tests notebooks
 
-.PHONY: help setup data validate test test-raw lint format all clean
+.PHONY: help setup data validate results test test-raw lint format all clean
 
 help:  ## list targets
 	@grep -E '^[a-z-]+:.*##' $(MAKEFILE_LIST) | awk -F':.*## ' '{printf "  %-10s %s\n", $$1, $$2}'
@@ -19,6 +19,9 @@ data:  ## raw JSON -> data/processed/*.parquet
 
 validate:  ## data contract + ballot integrity -> reports/validation_*
 	$(RUN) esc-bias validate
+
+results:  ## models, RQ1-RQ3, network -> reports/results/ and reports/figures/
+	$(RUN) esc-bias analyze && $(RUN) esc-bias figures
 
 test:  ## unit tests (+ raw-data integration tests if ESC_DATA_ROOT is set)
 	$(RUN) pytest --cov --cov-report=term-missing:skip-covered

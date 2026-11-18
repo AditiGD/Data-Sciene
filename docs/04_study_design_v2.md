@@ -79,8 +79,10 @@ Notation: voter *v*, receiver *j*, show *s* (year × round), vote type τ, eligi
 **M2 (primary): top-10 rank-ordered logit with crossed effects** (reference code `pilot/esc_models.py`)
 
 ```
-η_vjsτ = κ_yτ · q_jsτ + x_vj'β_τ + b_vjτ    q: song quality per receiver × show × type (fixed)
-                                             κ_yτ: year × type scale (R17; was sensitivity S12)
+η_vjsτ = κ_yτ · (q_jsτ + x_vj'β_τ + b_vjτ)  q: song quality per receiver × show × type (fixed)
+                                             κ_yτ: year × type precision (R17), geometric mean 1 per τ;
+                                             it scales the whole utility, so b and β are in
+                                             common units across years (κ on q alone is unidentified)
 P(ballot_vsτ) = ∏_{k=1..10} exp(η_(k)) / Σ_{j ∈ E_vsτ \ ranked so far} exp(η_j)
 b_vjτ ~ N(0, σ²_τ),  σ²_τ by empirical Bayes (type-II ML, run to convergence)
 ```
@@ -267,6 +269,7 @@ The package's model, inference and network functions are still documented stubs.
 | Date | Change | Reason | Exploratory? |
 |---|---|---|---|
 | 2026-11-18 | v2 → v2.1: findings R1–R18 applied (see `06`) | independent red-team review | no (pre-freeze) |
+| 2026-11-18 | κ_yτ moved from multiplying q only to scaling the whole utility | κ·q alone is not identified when q is free per show | no (pre-freeze) |
 | | | | |
 
 ---

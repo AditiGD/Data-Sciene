@@ -7,13 +7,16 @@ import pandas as pd
 import pytest
 
 from esc_bias.inference import (
+    lfsr_from_draws,
     matrix_correlation,
     mrqap,
     permutation_p_value,
+    permutation_refit,
     permute_nodes,
     permute_within_ballots,
     qap_correlation,
     random_node_permutations,
+    reliability_corrected_r,
 )
 
 
@@ -99,6 +102,39 @@ def test_permute_within_ballots_preserves_ballots() -> None:
     assert (a.voter != a.receiver).all()
 
 
-def test_mrqap_is_a_documented_stub() -> None:
-    with pytest.raises(NotImplementedError):
-        mrqap(np.zeros((3, 3)), {})
+def test_mrqap_recovers_planted_and_null() -> None:
+    rng = np.random.default_rng(1)
+    n = 25
+    x1, x2 = rng.normal(size=(n, n)), rng.normal(size=(n, n))
+    y = 2.0 * x1 + rng.normal(size=(n, n))
+    res = mrqap(y, {"x1": x1, "x2": x2}, n_perm=200, seed=3)
+    assert abs(res.loc["x1", "coef"] - 2.0) < 0.3
+    assert res.loc["x1", "p_value"] < 0.02
+    assert res.loc["x2", "p_value"] > 0.1
+    assert 0.5 < res.loc["x1", "r2"] < 1
+    w = mrqap(y, {"x1": x1}, n_perm=20, seed=3, weights=np.ones((n, n)))
+    assert abs(w.loc["x1", "coef"] - 2.0) < 0.3
+
+
+def test_permutation_refit_trivial_fit() -> None:
+    countries = list("ABCDEFGH")
+    idx = pd.MultiIndex.from_product([countries, countries], names=["voter", "receiver"])
+    idx = idx[idx.get_level_values(0) != idx.get_level_values(1)]
+    cov = pd.DataFrame({"x": np.arange(len(idx), dtype=float)}, index=idx)
+
+    def fit(c: pd.DataFrame) -> dict[str, float]:
+        return {"ab": float(c.loc[("A", "B"), "x"])}
+
+    res = permutation_refit(fit, cov, n_perm=50, seed=0)
+    assert res.null.shape == (50, 1)
+    assert 0 < res.p_values["ab"] <= 1 and 0 < res.joint_p <= 1
+    again = permutation_refit(fit, cov, n_perm=50, seed=0)
+    assert np.allclose(res.null["ab"], again.null["ab"])
+    const = permutation_refit(lambda c: {"s": float(c["x"].sum())}, cov, n_perm=5, seed=1)
+    assert const.p_values["s"] == 1.0
+
+
+def test_reliability_and_lfsr() -> None:
+    assert reliability_corrected_r(0.4, 0.8, 0.5) == pytest.approx(0.4 / np.sqrt(0.4))
+    draws = np.column_stack([np.full(100, 1.0), np.r_[np.ones(60), -np.ones(40)]])
+    assert lfsr_from_draws(draws) == pytest.approx([0.0, 0.4])

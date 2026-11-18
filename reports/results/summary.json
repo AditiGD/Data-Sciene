@@ -1,0 +1,766 @@
+{
+  "settings": {
+    "seed": 20251117,
+    "B": 200,
+    "n_perm": 200,
+    "n_dyad_boot": 1000,
+    "n_iid": 20,
+    "n_strength": 100,
+    "n_leiden_seeds": 50,
+    "n_qap": 2000,
+    "n_mrqap": 2000,
+    "n_nmi": 2000,
+    "n_jobs": 4,
+    "delta_min": 2.0,
+    "lfsr_max": 0.05
+  },
+  "n_ballots": {
+    "jury": 591,
+    "televote": 698
+  },
+  "n_rows": {
+    "jury": 12858,
+    "televote": 14414
+  },
+  "n_dyads": {
+    "jury": 1924,
+    "televote": 1886,
+    "combined": 1880
+  },
+  "n_countries": 45,
+  "sigma2": {
+    "jury": 0.2679769496585943,
+    "televote": 1.459918180120539
+  },
+  "kappa": {
+    "jury": {
+      "2016": 1.3880950479495269,
+      "2017": 1.081201823917343,
+      "2018": 1.1264118790008897,
+      "2019": 1.610010068748695,
+      "2021": 0.9595773518616696,
+      "2022": 0.7025745947230574,
+      "2023": 0.8782850193707684,
+      "2024": 0.5907173590316084,
+      "2025": 1.0504141715706108
+    },
+    "televote": {
+      "2016": 1.1696140294656518,
+      "2017": 0.9755122776617624,
+      "2018": 1.1894649034516676,
+      "2019": 1.0491854651845993,
+      "2021": 0.9530256604874242,
+      "2022": 0.9771477576651025,
+      "2023": 1.0086015317661898,
+      "2024": 0.8973174022983536,
+      "2025": 0.8332786329762647
+    }
+  },
+  "converged": {
+    "jury": true,
+    "televote": true
+  },
+  "bootstrap_converged": {
+    "jury": 200,
+    "televote": 200
+  },
+  "beta": [
+    {
+      "vote_type": "jury",
+      "covariate": "border_land",
+      "beta": -0.011480267886779496,
+      "lo": -0.1621082908835098,
+      "hi": 0.1391477551099508,
+      "p_perm": 0.9054726368159204,
+      "beta_points": -0.01749999999999985,
+      "lo_points": -0.21649999999999991,
+      "hi_points": 0.2260000000000002,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "border_maritime",
+      "beta": -0.2001790210992002,
+      "lo": -0.4358652110193616,
+      "hi": 0.03550716882096122,
+      "p_perm": 0.31840796019900497,
+      "beta_points": -0.26224999999999987,
+      "lo_points": -0.53725,
+      "hi_points": 0.052750000000000075,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "same_m49_region",
+      "beta": 0.12719767239650157,
+      "lo": 0.031749490204188824,
+      "hi": 0.2226458545888143,
+      "p_perm": 0.06467661691542288,
+      "beta_points": 0.20675,
+      "lo_points": 0.046250000000000124,
+      "hi_points": 0.3580000000000001,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "shared_language",
+      "beta": 0.09223512916778155,
+      "lo": -0.0263573495663343,
+      "hi": 0.21082760790189742,
+      "p_perm": 0.24875621890547264,
+      "beta_points": 0.1472500000000001,
+      "lo_points": -0.035499999999999865,
+      "hi_points": 0.3377500000000002,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "ex_ussr",
+      "beta": 0.29666151309044847,
+      "lo": 0.1075004946114434,
+      "hi": 0.48582253156945354,
+      "p_perm": 0.03980099502487562,
+      "beta_points": 0.49049999999999994,
+      "lo_points": 0.17275000000000018,
+      "hi_points": 0.8475000000000001,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "ex_yugoslavia",
+      "beta": 0.5779466133647374,
+      "lo": 0.22326300522810316,
+      "hi": 0.9326302215013716,
+      "p_perm": 0.014925373134328358,
+      "beta_points": 1.05375,
+      "lo_points": 0.3587500000000001,
+      "hi_points": 1.8890000000000002,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "nordic",
+      "beta": 0.5375834973111221,
+      "lo": 0.24901652898849352,
+      "hi": 0.8261504656337506,
+      "p_perm": 0.05472636815920398,
+      "beta_points": 0.9565000000000001,
+      "lo_points": 0.4092500000000001,
+      "hi_points": 1.6247500000000001,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "log_distance",
+      "beta": -0.3327694742270734,
+      "lo": -0.42189391618513356,
+      "hi": -0.2436450322690133,
+      "p_perm": 0.004975124378109453,
+      "beta_points": -0.42374999999999985,
+      "lo_points": -0.5207499999999998,
+      "hi_points": -0.31699999999999995,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "border_land",
+      "beta": 0.4536838241278864,
+      "lo": 0.16825298429311508,
+      "hi": 0.7391146639626577,
+      "p_perm": 0.0845771144278607,
+      "beta_points": 0.3837499999999999,
+      "lo_points": 0.12949999999999995,
+      "hi_points": 0.7062499999999999,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "border_maritime",
+      "beta": 0.4956707385327151,
+      "lo": 0.05201384990775909,
+      "hi": 0.9393276271576712,
+      "p_perm": 0.23383084577114427,
+      "beta_points": 0.43000000000000005,
+      "lo_points": 0.03400000000000003,
+      "hi_points": 0.9912500000000001,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "same_m49_region",
+      "beta": 0.3935022796083341,
+      "lo": 0.21703806354828958,
+      "hi": 0.5699664956683786,
+      "p_perm": 0.014925373134328358,
+      "beta_points": 0.32599999999999996,
+      "lo_points": 0.17325000000000002,
+      "hi_points": 0.5105000000000001,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "shared_language",
+      "beta": 0.5279027533446983,
+      "lo": 0.3271396880099664,
+      "hi": 0.7286658186794301,
+      "p_perm": 0.004975124378109453,
+      "beta_points": 0.46175,
+      "lo_points": 0.26949999999999996,
+      "hi_points": 0.69375,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "ex_ussr",
+      "beta": 0.748270753021609,
+      "lo": 0.42043350847571115,
+      "hi": 1.0761079975675067,
+      "p_perm": 0.05472636815920398,
+      "beta_points": 0.7180000000000001,
+      "lo_points": 0.35150000000000003,
+      "hi_points": 1.2077500000000003,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "ex_yugoslavia",
+      "beta": 5.408483352760346,
+      "lo": 4.708929325541981,
+      "hi": 6.10803737997871,
+      "p_perm": 0.004975124378109453,
+      "beta_points": 9.80475,
+      "lo_points": 8.90725,
+      "hi_points": 10.44575,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "nordic",
+      "beta": 1.7370678332060245,
+      "lo": 1.204274228300084,
+      "hi": 2.269861438111965,
+      "p_perm": 0.009950248756218905,
+      "beta_points": 2.4245,
+      "lo_points": 1.4255,
+      "hi_points": 3.6457500000000005,
+      "joint_p_block": 0.004975124378109453
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "log_distance",
+      "beta": -0.8083446431708146,
+      "lo": -0.9778394395832049,
+      "hi": -0.6388498467584243,
+      "p_perm": 0.004975124378109453,
+      "beta_points": -0.43925,
+      "lo_points": -0.49175,
+      "hi_points": -0.3715,
+      "joint_p_block": 0.004975124378109453
+    }
+  ],
+  "beta_joint_block": {
+    "jury": {
+      "joint_stat": 49.60433043931008,
+      "joint_p": 0.004975124378109453,
+      "n_perm": 200
+    },
+    "televote": {
+      "joint_stat": 194.22676230846517,
+      "joint_p": 0.004975124378109453,
+      "n_perm": 200
+    }
+  },
+  "mrqap": [
+    {
+      "vote_type": "jury",
+      "covariate": "border_land",
+      "coef": 0.06431987097359945,
+      "p_value": 0.11894052973513243
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "border_maritime",
+      "coef": 0.03754643256676361,
+      "p_value": 0.6091954022988506
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "same_m49_region",
+      "coef": 0.09861910026083158,
+      "p_value": 0.0004997501249375312
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "shared_language",
+      "coef": 0.07078524829268731,
+      "p_value": 0.014492753623188406
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "ex_ussr",
+      "coef": 0.1287122461113389,
+      "p_value": 0.0024987506246876563
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "ex_yugoslavia",
+      "coef": 0.1449247847630622,
+      "p_value": 0.0814592703648176
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "nordic",
+      "coef": 0.2803959058854285,
+      "p_value": 0.0069965017491254375
+    },
+    {
+      "vote_type": "jury",
+      "covariate": "log_distance",
+      "coef": -0.027882264427165987,
+      "p_value": 0.0024987506246876563
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "border_land",
+      "coef": 0.7456402927159377,
+      "p_value": 0.0004997501249375312
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "border_maritime",
+      "coef": 0.8916839644997159,
+      "p_value": 0.001999000499750125
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "same_m49_region",
+      "coef": 0.5196045702323288,
+      "p_value": 0.0004997501249375312
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "shared_language",
+      "coef": 0.5269218291831785,
+      "p_value": 0.0004997501249375312
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "ex_ussr",
+      "coef": 0.6627938860839606,
+      "p_value": 0.0004997501249375312
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "ex_yugoslavia",
+      "coef": 2.696484217054578,
+      "p_value": 0.0004997501249375312
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "nordic",
+      "coef": 1.5133400771329775,
+      "p_value": 0.0009995002498750624
+    },
+    {
+      "vote_type": "televote",
+      "covariate": "log_distance",
+      "coef": -0.05907090779715464,
+      "p_value": 0.21689155422288856
+    }
+  ],
+  "top10_combined": [
+    {
+      "voter": "RS",
+      "receiver": "ME",
+      "delta": 8.048170560737423,
+      "delta_lo": 7.128362397462426,
+      "delta_hi": 8.894794196939765,
+      "lfsr": 0.0,
+      "n_obs": 7
+    },
+    {
+      "voter": "ME",
+      "receiver": "RS",
+      "delta": 7.8250626628126625,
+      "delta_lo": 6.886907045478006,
+      "delta_hi": 8.792635909055667,
+      "lfsr": 0.0,
+      "n_obs": 13
+    },
+    {
+      "voter": "CY",
+      "receiver": "GR",
+      "delta": 7.6962797561477405,
+      "delta_lo": 6.850429263625581,
+      "delta_hi": 8.495016656135785,
+      "lfsr": 0.0,
+      "n_obs": 21
+    },
+    {
+      "voter": "RS",
+      "receiver": "MK",
+      "delta": 7.608872601397435,
+      "delta_lo": 6.666056621773612,
+      "delta_hi": 8.430518707123609,
+      "lfsr": 0.0,
+      "n_obs": 8
+    },
+    {
+      "voter": "BA",
+      "receiver": "RS",
+      "delta": 7.532623662208935,
+      "delta_lo": 6.24198488212338,
+      "delta_hi": 8.708333597562422,
+      "lfsr": 0.0,
+      "n_obs": 2
+    },
+    {
+      "voter": "ME",
+      "receiver": "BA",
+      "delta": 7.437643785374685,
+      "delta_lo": 6.4648831561825215,
+      "delta_hi": 8.705511285053449,
+      "lfsr": 0.0,
+      "n_obs": 2
+    },
+    {
+      "voter": "HR",
+      "receiver": "RS",
+      "delta": 7.428037216850521,
+      "delta_lo": 6.43495938119104,
+      "delta_hi": 8.411597690624552,
+      "lfsr": 0.0,
+      "n_obs": 18
+    },
+    {
+      "voter": "ME",
+      "receiver": "AL",
+      "delta": 7.398930060911227,
+      "delta_lo": 6.51665479877888,
+      "delta_hi": 8.351814795715642,
+      "lfsr": 0.0,
+      "n_obs": 8
+    },
+    {
+      "voter": "MK",
+      "receiver": "ME",
+      "delta": 7.367895829875267,
+      "delta_lo": 6.216993172117167,
+      "delta_hi": 8.640705676957426,
+      "lfsr": 0.0,
+      "n_obs": 2
+    },
+    {
+      "voter": "RO",
+      "receiver": "MD",
+      "delta": 7.310512353421659,
+      "delta_lo": 6.184777117685708,
+      "delta_hi": 8.242855357582343,
+      "lfsr": 0.0,
+      "n_obs": 13
+    }
+  ],
+  "n_combined_lfsr_lt_005": 606,
+  "expected_false_signs_combined_lfsr_lt_005": 6.280000000000001,
+  "rq2": {
+    "jury_all": {
+      "ceiling_pearson": 0.4940703795464462,
+      "ceiling_spearman": 0.41497400048262695,
+      "drift_pearson": 0.4626274338758722,
+      "drift_spearman": 0.3961138364030893,
+      "ceiling_minus_drift": 0.03144294567057404,
+      "diff_ci95": [
+        -0.008522032789391525,
+        0.07165964896714301
+      ],
+      "drift_claimed": false,
+      "spearman_brown_reliability": 0.6613749744458902,
+      "n_pairs": 1521
+    },
+    "jury_fin": {
+      "ceiling_pearson": 0.725697900222675,
+      "ceiling_spearman": 0.6384328041485742,
+      "drift_pearson": 0.6682038252040771,
+      "drift_spearman": 0.642663868035804,
+      "ceiling_minus_drift": 0.057494075018597934,
+      "diff_ci95": [
+        0.022340401823233578,
+        0.09242445652857154
+      ],
+      "drift_claimed": true,
+      "spearman_brown_reliability": 0.8410485985166173,
+      "n_pairs": 1365
+    },
+    "televote_all": {
+      "ceiling_pearson": 0.856195079750693,
+      "ceiling_spearman": 0.7230748892370122,
+      "drift_pearson": 0.8117918360198803,
+      "drift_spearman": 0.670325990363912,
+      "ceiling_minus_drift": 0.044403243730812725,
+      "diff_ci95": [
+        0.0295444838688245,
+        0.06304730847058099
+      ],
+      "drift_claimed": true,
+      "spearman_brown_reliability": 0.9225270437261252,
+      "n_pairs": 1535
+    },
+    "televote_fin": {
+      "ceiling_pearson": 0.8709124167017122,
+      "ceiling_spearman": 0.7612083665522814,
+      "drift_pearson": 0.8345550924927244,
+      "drift_spearman": 0.7050973986486692,
+      "ceiling_minus_drift": 0.03635732420898774,
+      "diff_ci95": [
+        0.021367818509340837,
+        0.05291905798299834
+      ],
+      "drift_claimed": true,
+      "spearman_brown_reliability": 0.9310028721035161,
+      "n_pairs": 1357
+    }
+  },
+  "rq2_minimum_detectable_change": {
+    "jury": {
+      "median_n_early_plus_late": 8.0,
+      "median_se_change": 0.7152990980650774,
+      "mdc_logit": 1.7785732250945827,
+      "mdc_points": 4.283250000000001,
+      "n_pairs": 1563,
+      "n_excluding_zero": 94,
+      "expected_by_chance_10pct": 156.3
+    },
+    "televote": {
+      "median_n_early_plus_late": 9.0,
+      "median_se_change": 1.0256530689680587,
+      "mdc_logit": 2.5502605716087627,
+      "mdc_points": 4.309,
+      "n_pairs": 1553,
+      "n_excluding_zero": 133,
+      "expected_by_chance_10pct": 155.3
+    }
+  },
+  "rq3": {
+    "r_raw": 0.6235687793707543,
+    "p_qap": 0.0004997501249375312,
+    "n_perm": 2000,
+    "reliability_jury": 0.6613749744458902,
+    "reliability_televote": 0.9225270437261252,
+    "reliability_source": "odd/even Pearson of total affinity, Spearman-Brown (approximate)",
+    "r_corrected": 0.7983088262341008,
+    "r_raw_m1": 0.3918125646991226,
+    "p_qap_m1": 0.0004997501249375312,
+    "n_common_pairs": 1880,
+    "gap_mean": 0.6787654445232228,
+    "n_gap_interval_excludes_0": 312,
+    "n_gap_lfsr_lt_005": 300
+  },
+  "network": {
+    "modularity": 0.32137763170393724,
+    "mean_pairwise_ARI": 0.8297041299254821,
+    "n_communities": 4,
+    "communities": {
+      "0": [
+        "AL",
+        "BA",
+        "BG",
+        "CY",
+        "GR",
+        "HR",
+        "HU",
+        "IT",
+        "ME",
+        "MK",
+        "MT",
+        "RS",
+        "SI",
+        "SM"
+      ],
+      "1": [
+        "AU",
+        "DK",
+        "EE",
+        "FI",
+        "GB",
+        "IE",
+        "IS",
+        "LT",
+        "LV",
+        "NO",
+        "PL",
+        "SE"
+      ],
+      "2": [
+        "AT",
+        "BE",
+        "CH",
+        "DE",
+        "ES",
+        "FR",
+        "IL",
+        "LU",
+        "NL",
+        "PT"
+      ],
+      "3": [
+        "AM",
+        "AZ",
+        "BY",
+        "CZ",
+        "GE",
+        "MD",
+        "RO",
+        "RU",
+        "UA"
+      ]
+    },
+    "resolution": 1.0,
+    "n_leiden_seeds": 50,
+    "null_iid_affinity": {
+      "mean": 0.14930603354810318,
+      "sd": 0.0104720280234946,
+      "max": 0.17469450783031912,
+      "p": 0.047619047619047616,
+      "n": 20
+    },
+    "null_strength_preserving": {
+      "mean": 0.1482099795978495,
+      "sd": 0.00813995744559728,
+      "max": 0.16691092070475586,
+      "p": 0.009900990099009901,
+      "n": 100
+    },
+    "nmi_m49": 0.6472824081525904,
+    "nmi_p": 0.0004997501249375312,
+    "nmi_n_perm": 2000,
+    "backbone_n_edges": 209,
+    "n_positive_edges": 1202,
+    "iid_null_total_variance": {
+      "jury": 0.38725950932471037,
+      "televote": 3.0945122244530476
+    },
+    "notes": "iid null: b ~ N(0, s2 + var(x'beta_hat)), beta = 0, full M2 refit with covariates and EB s2, consensus Leiden over 10 seeds; strength null: best of 1 Leiden per rewired graph (in/out degree exact, strength approximate)."
+  },
+  "face_validity": [
+    {
+      "item": "GR->CY",
+      "vote_type": "combined",
+      "delta": 7.255796814421071,
+      "delta_lo": 6.439877366761294,
+      "delta_hi": 7.933202190782356,
+      "lfsr": 0.0,
+      "n_obs": 23.0
+    },
+    {
+      "item": "CY->GR",
+      "vote_type": "combined",
+      "delta": 7.6962797561477405,
+      "delta_lo": 6.850429263625581,
+      "delta_hi": 8.495016656135785,
+      "lfsr": 0.0,
+      "n_obs": 21.0
+    },
+    {
+      "item": "RO->MD",
+      "vote_type": "combined",
+      "delta": 7.310512353421659,
+      "delta_lo": 6.184777117685708,
+      "delta_hi": 8.242855357582343,
+      "lfsr": 0.0,
+      "n_obs": 13.0
+    },
+    {
+      "item": "ME->RS",
+      "vote_type": "combined",
+      "delta": 7.8250626628126625,
+      "delta_lo": 6.886907045478006,
+      "delta_hi": 8.792635909055667,
+      "lfsr": 0.0,
+      "n_obs": 13.0
+    },
+    {
+      "item": "HR->RS",
+      "vote_type": "combined",
+      "delta": 7.428037216850521,
+      "delta_lo": 6.43495938119104,
+      "delta_hi": 8.411597690624552,
+      "lfsr": 0.0,
+      "n_obs": 18.0
+    },
+    {
+      "item": "LV->LT",
+      "vote_type": "combined",
+      "delta": 7.201590293781307,
+      "delta_lo": 6.412187753265041,
+      "delta_hi": 8.047476250884548,
+      "lfsr": 0.0,
+      "n_obs": 21.0
+    },
+    {
+      "item": "LT->LV",
+      "vote_type": "combined",
+      "delta": 7.052499886067574,
+      "delta_lo": 6.061662120420772,
+      "delta_hi": 7.8839222213540046,
+      "lfsr": 0.0,
+      "n_obs": 13.0
+    },
+    {
+      "item": "AM->AZ",
+      "vote_type": "combined",
+      "delta": -0.7847031801183165,
+      "delta_lo": -0.9492802494404504,
+      "delta_hi": -0.5607990844146038,
+      "lfsr": 0.0,
+      "n_obs": 16.0
+    },
+    {
+      "item": "AZ->AM",
+      "vote_type": "combined",
+      "delta": -0.6980994121356369,
+      "delta_lo": -0.9095404995901454,
+      "delta_hi": -0.45458902904833093,
+      "lfsr": 0.0,
+      "n_obs": 19.0
+    },
+    {
+      "item": "Nordic within-bloc mean",
+      "vote_type": "combined",
+      "delta": 3.6909103482779226,
+      "delta_lo": 3.288028356195858,
+      "delta_hi": 4.0532089762528445,
+      "lfsr": 0.0,
+      "n_obs": 20.0
+    }
+  ],
+  "batch_fits_not_converged": [],
+  "runtimes_s": {
+    "primary_fits": 9.4,
+    "bootstrap": 240.9,
+    "rq1_dyads": 0.9,
+    "permutation_refits": 139.4,
+    "vif_mrqap": 15.2,
+    "batch_fits": 35.9,
+    "rq2": 1.6,
+    "rq3": 0.6,
+    "network": 61.3,
+    "sensitivity": 1.3,
+    "face_validity": 0.0,
+    "summary": 0.0
+  },
+  "affinity_definition": "pair outputs use total affinity a = x'beta + b (b_resid kept)",
+  "deviations": [
+    "permutation refits: 200 per vote type (spec 1,000), warm start, s2 fixed at the EB value, kappa re-iterated",
+    "MRQAP / QAP / NMI permutations: 2000 / 2000 / 2000 (config n_permutations 10,000)",
+    "iid-affinity network null: 20 replicates",
+    "pair outputs (b, delta, network, RQ2, RQ3, sensitivities) use total affinity x'beta + b from the covariate model; b_resid is reported alongside",
+    "RQ2 per-pair change and period backbone thresholds use Laplace SEs of b (no bootstrap); MDC at 90% two-sided, 80% power",
+    "RQ2 finals-only drift CI is against a finals-only odd/even ceiling",
+    "S13: q (eta scale) from an M2 fit without bloc cells (shared land border, ex-Yugoslavia, ex-USSR, Nordic), then one MAP of (beta, b, kappa) on all cells with q fixed and s2 at the primary value",
+    "S5 applies to televote only (jury has no 2023-25 semi rows)",
+    "rq1_beta.csv: beta/lo/hi in logit units, lo/hi = beta +- 1.645 bootstrap SD (normal approximation; basic-bootstrap quantiles need not contain beta); beta_points/lo_points/hi_points map them to reference-design points",
+    "delta for combined n_obs = n_jury + n_televote"
+  ],
+  "runtime_total_s": 506.5,
+  "mrqap_note": "MRQAP on b-hat of M2 without covariates (regenerated after the main run with the same code path)"
+}

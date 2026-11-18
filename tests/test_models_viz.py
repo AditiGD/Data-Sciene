@@ -10,7 +10,7 @@ import pytest
 from esc_bias.anomalies import apply_register, load_register
 from esc_bias.config import PROJECT_ROOT
 from esc_bias.io import build_tidy
-from esc_bias.models import fit_crossed_effects, fit_rank_ordered_logit, model_frame
+from esc_bias.models import model_frame
 from esc_bias.viz import VOTE_TYPE_COLORS, save_figure, set_style, symmetric_limits
 
 
@@ -33,12 +33,6 @@ def test_model_frame_filters(flagged) -> None:
 def test_model_frame_requires_register(fake_root: Path) -> None:
     with pytest.raises(KeyError, match="apply_register"):
         model_frame(build_tidy(fake_root, (2019,)).votes, "jury")
-
-
-def test_fitting_functions_are_stubs(flagged) -> None:
-    for fit in (fit_crossed_effects, fit_rank_ordered_logit):
-        with pytest.raises(NotImplementedError):
-            fit(model_frame(flagged, "jury"))
 
 
 def test_save_figure_and_style(tmp_path: Path) -> None:

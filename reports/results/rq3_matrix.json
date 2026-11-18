@@ -1,0 +1,15 @@
+{
+  "r_raw": 0.6235687793707543,
+  "p_qap": 0.0004997501249375312,
+  "n_perm": 2000,
+  "reliability_jury": 0.6613749744458902,
+  "reliability_televote": 0.9225270437261252,
+  "reliability_source": "odd/even Pearson of total affinity, Spearman-Brown (approximate)",
+  "r_corrected": 0.7983088262341008,
+  "r_raw_m1": 0.3918125646991226,
+  "p_qap_m1": 0.0004997501249375312,
+  "n_common_pairs": 1880,
+  "gap_mean": 0.6787654445232228,
+  "n_gap_interval_excludes_0": 312,
+  "n_gap_lfsr_lt_005": 300
+}

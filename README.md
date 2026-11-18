@@ -29,6 +29,7 @@ git clone https://github.com/Graph-Drawing-Contest/eurovision-dataset data/raw/e
 git -C data/raw/eurovision-dataset checkout 1f39f6b238b94f2806694a08607998258ed8a41e
 export ESC_DATA_ROOT=$PWD/data/raw/eurovision-dataset   # or any other clone
 make all                                           # lint, test, build data, validate
+make results                                       # fit models, run RQ1-RQ3 + network, write reports/results + figures (~9 min)
 ```
 
 `make all` writes `data/processed/votes.parquet` (the tidy vote table) and
@@ -96,6 +97,7 @@ run also drops `votes.sensitivity` rows.
 | [`docs/04a_methods_and_pilot.md`](docs/04a_methods_and_pilot.md) | Methods detail, pilot and planted-bias simulation |
 | [`docs/05_engineering_standards.md`](docs/05_engineering_standards.md) | Engineering standards and definition of done |
 | [`docs/06_red_team_review.md`](docs/06_red_team_review.md) | Red-team review |
+| [`docs/07_results.md`](docs/07_results.md) | Results of the first full pipeline run (RQ1–RQ3, network, robustness) |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Branching, review, commit style |
 
 ## Data

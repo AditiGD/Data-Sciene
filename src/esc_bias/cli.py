@@ -2,6 +2,8 @@
 
     esc-bias build-data [--config PATH] [--data-root PATH] [--include-holdout]
     esc-bias validate   [--config PATH] [--strict]
+    esc-bias analyze    [--config PATH] [--results-dir PATH] [--n-jobs N]
+    esc-bias figures    [--results-dir PATH] [--figures-dir PATH]
 
 ``build-data`` reads the raw dataset and writes to ``data/processed/``:
 
@@ -15,6 +17,10 @@
 per check or failing record), ``reports/validation_summary.md`` and, if any ballot
 fails, ``reports/anomaly_candidates.csv``. Failing checks are reported, not fatal,
 unless ``--strict`` is given.
+
+``analyze`` fits the study models on ``votes.parquet`` and writes the result tables to
+``reports/results/`` (:mod:`esc_bias.analysis`); ``figures`` turns them into
+``reports/figures/`` (:mod:`esc_bias.figures`).
 """
 
 from __future__ import annotations
@@ -171,7 +177,31 @@ def build_parser() -> argparse.ArgumentParser:
     b.add_argument("--include-holdout", action="store_true", help="also build holdout_years")
     v = sub.add_parser("validate", help="data contract + ballot integrity -> reports/")
     v.add_argument("--strict", action="store_true", help="exit 1 if an error-level check fails")
+    a = sub.add_parser("analyze", help="fit models, RQ1-RQ3, network -> reports/results/")
+    a.add_argument("--results-dir", type=Path, default=None, help="default reports/results")
+    a.add_argument("--n-jobs", type=int, default=4, help="worker processes")
+    f = sub.add_parser("figures", help="reports/results/ -> reports/figures/")
+    f.add_argument("--results-dir", type=Path, default=None, help="default reports/results")
+    f.add_argument("--figures-dir", type=Path, default=None, help="default reports/figures")
     return parser
+
+
+def cmd_analyze(cfg: Config, results_dir: Path | None = None, n_jobs: int = 4) -> dict[str, Any]:
+    """Run :func:`esc_bias.analysis.run_analysis` on the processed votes."""
+    from esc_bias.analysis import Settings, load_votes, run_analysis
+
+    out = results_dir or cfg.reports_dir / "results"
+    settings = Settings(seed=cfg.seed, n_jobs=n_jobs)
+    return run_analysis(load_votes(cfg.processed_dir), out, settings)
+
+
+def cmd_figures(
+    cfg: Config, results_dir: Path | None = None, figures_dir: Path | None = None
+) -> list[Path]:
+    """Build every figure whose inputs exist (:func:`esc_bias.figures.main`)."""
+    from esc_bias.figures import main as figures_main
+
+    return figures_main(results_dir or cfg.reports_dir / "results", figures_dir or cfg.figures_dir)
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -187,6 +217,13 @@ def main(argv: Sequence[str] | None = None) -> int:
     cfg = load_config(args.config, env=env)
     if args.command == "build-data":
         cmd_build_data(cfg, include_holdout=args.include_holdout)
+        return 0
+    if args.command == "analyze":
+        cmd_analyze(cfg, args.results_dir, args.n_jobs)
+        return 0
+    if args.command == "figures":
+        written = cmd_figures(cfg, args.results_dir, args.figures_dir)
+        log.info("wrote %d figure files", len(written))
         return 0
     report = cmd_validate(cfg)
     if args.strict and has_errors(report):

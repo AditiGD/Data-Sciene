@@ -1,0 +1,238 @@
+{
+  "modularity": 0.32137763170393724,
+  "mean_pairwise_ARI": 0.8297041299254821,
+  "n_communities": 4,
+  "communities": {
+    "0": [
+      "AL",
+      "BA",
+      "BG",
+      "CY",
+      "GR",
+      "HR",
+      "HU",
+      "IT",
+      "ME",
+      "MK",
+      "MT",
+      "RS",
+      "SI",
+      "SM"
+    ],
+    "1": [
+      "AU",
+      "DK",
+      "EE",
+      "FI",
+      "GB",
+      "IE",
+      "IS",
+      "LT",
+      "LV",
+      "NO",
+      "PL",
+      "SE"
+    ],
+    "2": [
+      "AT",
+      "BE",
+      "CH",
+      "DE",
+      "ES",
+      "FR",
+      "IL",
+      "LU",
+      "NL",
+      "PT"
+    ],
+    "3": [
+      "AM",
+      "AZ",
+      "BY",
+      "CZ",
+      "GE",
+      "MD",
+      "RO",
+      "RU",
+      "UA"
+    ]
+  },
+  "resolution": 1.0,
+  "n_leiden_seeds": 50,
+  "null_iid_affinity": {
+    "mean": 0.14930603354810318,
+    "sd": 0.0104720280234946,
+    "max": 0.17469450783031912,
+    "p": 0.047619047619047616,
+    "n": 20
+  },
+  "null_strength_preserving": {
+    "mean": 0.1482099795978495,
+    "sd": 0.00813995744559728,
+    "max": 0.16691092070475586,
+    "p": 0.009900990099009901,
+    "n": 100
+  },
+  "nmi_m49": 0.6472824081525904,
+  "nmi_p": 0.0004997501249375312,
+  "nmi_n_perm": 2000,
+  "backbone_n_edges": 209,
+  "backbone_edges_top": [
+    [
+      "RS",
+      "ME",
+      8.05
+    ],
+    [
+      "ME",
+      "RS",
+      7.83
+    ],
+    [
+      "CY",
+      "GR",
+      7.7
+    ],
+    [
+      "RS",
+      "MK",
+      7.61
+    ],
+    [
+      "BA",
+      "RS",
+      7.53
+    ],
+    [
+      "ME",
+      "BA",
+      7.44
+    ],
+    [
+      "HR",
+      "RS",
+      7.43
+    ],
+    [
+      "ME",
+      "AL",
+      7.4
+    ],
+    [
+      "MK",
+      "ME",
+      7.37
+    ],
+    [
+      "RO",
+      "MD",
+      7.31
+    ],
+    [
+      "MK",
+      "RS",
+      7.27
+    ],
+    [
+      "GR",
+      "CY",
+      7.26
+    ],
+    [
+      "BA",
+      "ME",
+      7.21
+    ],
+    [
+      "LV",
+      "LT",
+      7.2
+    ],
+    [
+      "MK",
+      "AL",
+      7.14
+    ],
+    [
+      "LT",
+      "LV",
+      7.05
+    ],
+    [
+      "HR",
+      "BA",
+      7.02
+    ],
+    [
+      "SI",
+      "HR",
+      7.02
+    ],
+    [
+      "BA",
+      "HR",
+      6.93
+    ],
+    [
+      "AM",
+      "GE",
+      6.74
+    ],
+    [
+      "MD",
+      "RO",
+      6.73
+    ],
+    [
+      "ME",
+      "HR",
+      6.72
+    ],
+    [
+      "ME",
+      "MK",
+      6.7
+    ],
+    [
+      "HR",
+      "SI",
+      6.67
+    ],
+    [
+      "LV",
+      "EE",
+      6.44
+    ],
+    [
+      "MK",
+      "HR",
+      6.34
+    ],
+    [
+      "RS",
+      "HR",
+      6.29
+    ],
+    [
+      "SI",
+      "RS",
+      6.21
+    ],
+    [
+      "HR",
+      "ME",
+      6.16
+    ],
+    [
+      "GE",
+      "AM",
+      6.11
+    ]
+  ],
+  "n_positive_edges": 1202,
+  "iid_null_total_variance": {
+    "jury": 0.38725950932471037,
+    "televote": 3.0945122244530476
+  },
+  "notes": "iid null: b ~ N(0, s2 + var(x'beta_hat)), beta = 0, full M2 refit with covariates and EB s2, consensus Leiden over 10 seeds; strength null: best of 1 Leiden per rewired graph (in/out degree exact, strength approximate)."
+}

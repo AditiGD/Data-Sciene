@@ -1,0 +1,17 @@
+vote_type,covariate,vif
+jury,border_land,1.6049757069084656
+jury,border_maritime,1.0936345499608302
+jury,same_m49_region,1.334166856621211
+jury,shared_language,1.5064850245321553
+jury,ex_ussr,1.217367276939799
+jury,ex_yugoslavia,1.116244131751053
+jury,nordic,1.092094032158882
+jury,log_distance,1.4602598615697215
+televote,border_land,1.6085926545572062
+televote,border_maritime,1.0969177666367376
+televote,same_m49_region,1.3378294958796932
+televote,shared_language,1.5045785433590604
+televote,ex_ussr,1.2186860136464652
+televote,ex_yugoslavia,1.1192794361124019
+televote,nordic,1.0934418099965073
+televote,log_distance,1.462482223905122
